@@ -20,6 +20,7 @@
     margin-left: 40px;
     padding: 8px;
     border: 1px solid #fff;
+    transition: 0.3s;
     border-radius: 4px;
   }
   .navbar a:last-child:hover {
