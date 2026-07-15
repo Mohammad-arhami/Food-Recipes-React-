@@ -16,6 +16,3 @@ export default function RecipeList({recipes}) {
     </div>
   )
 }
-// data.map((recipe) => (
-//         <h2 key={recipe.id}>{recipe.title}</h2>
-//       ))
