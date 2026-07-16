@@ -17,7 +17,9 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    postData({title, ingredients, method , cookingTime : cookingTime + ' minuts'});
+    if (!error) {
+      postData({title, ingredients, method , cookingTime : cookingTime + ' minuts'});
+    }
   }
 
   const handleAdd = (e) => {
