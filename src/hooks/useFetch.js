@@ -10,7 +10,7 @@ export const useFetch = (url, method = 'GET') => {
         setOptions({
             method : "POST",
             hedears : {
-                "Content-type" : "application/json"
+                "Content-Type" : "application/json"
             },
             body : JSON.stringify(postData)
         })
