@@ -12,7 +12,7 @@ export default function Create() {
   const [newIngredients , setNewIngredients] = useState('');
   const [ingredients , setIngredients] = useState([]);
 
-  const {postData, data , error} = useFetch('http://localhost:3000/recipes' , 'POST')
+  const {postData, data , error} = useFetch('http://localhost:3000/recipes' , 'POST');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -32,9 +32,9 @@ export default function Create() {
 
   useEffect(() => {
     if (data) {
-      navigate('/')
+      navigate('/');
     }
-  }, [data])
+  } , [data , navigate])
 
   return (
     <div className='create'>
