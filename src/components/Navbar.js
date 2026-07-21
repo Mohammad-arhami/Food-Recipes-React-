@@ -4,7 +4,7 @@ import './Navbar.css';
 import Searchbar from './Searchbar';
 import { useThem } from '../hooks/useThem';
 
-export default function NavBar({}) {
+export default function NavBar() {
 
   const {color , changeColor} = useThem()
 
