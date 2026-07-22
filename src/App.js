@@ -7,10 +7,14 @@ import Home from './pages/Home/Home'
 import Recipe from './pages/Recipe/Recipe'
 import Search from './pages/Search/Search'
 import ThemeSelector from './components/ThemeSelector';
+import { useThem } from './hooks/useThem';
 
 function App() {
+
+  const {mode} = useThem();
+
   return (
-    <div className="App">
+    <div className={`App ${mode}`}>
       
       <BrowserRouter>
         <Navbar />
