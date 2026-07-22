@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# 🍳 Recipe App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A modern recipe management application built with React, React Router, and JSON Server
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat&logo=react)
+![React Router](https://img.shields.io/badge/React_Router-6.14.0-CA4245?style=flat&logo=react-router)
+![JSON Server](https://img.shields.io/badge/JSON_Server-0.17.4-5A29E4?style=flat)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📖 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Installation](#-installation)
+- [Usage Guide](#-usage-guide)
+- [Project Structure](#-project-structure)
+- [API Endpoints](#-api-endpoints)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📝 About
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Recipe App** is a full-featured web application for managing cooking recipes. With this app you can:
 
-### `npm run build`
+- 📋 Browse all recipes
+- 🔍 Search recipes by title, ingredients, or method
+- ✏️ Create new recipes with detailed information
+- 📖 View complete recipe details
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is built with **React** on the frontend and **JSON Server** as a lightweight backend. All data is stored locally and no internet connection is required.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+### Core Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Feature | Description |
+|---------|-------------|
+| 📋 **View All Recipes** | Browse complete list with summary information |
+| 🔍 **Advanced Search** | Search in title, ingredients, and cooking method |
+| ✏️ **Add New Recipe** | Complete form with validation |
+| 📖 **Recipe Details** | View full recipe information |
+| 🔄 **Real-time Updates** | Changes are saved instantly |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### UI/UX Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- ✅ Fully responsive design for all devices
+- ✅ Clean and modern interface
+- ✅ Loading states for better UX
+- ✅ Error handling with user feedback
+- ✅ Dynamic ingredient management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **React** | 18.2.0 | UI Library |
+| **React Router** | 6.14.0 | Routing & Navigation |
+| **CSS3** | - | Styling |
+| **JavaScript (ES6)** | - | Application logic |
 
-### Code Splitting
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **JSON Server** | 0.17.4 | REST API & Database |
 
-### Analyzing the Bundle Size
+### Development Tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **npm** - Package manager
+- **Git** - Version control
+- **ESLint** - Code quality
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Installation
 
-### Advanced Configuration
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- Git (for cloning)
 
-### Deployment
+### Setup Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Option 1: Clone the repository
 
-### `npm run build` fails to minify
+```bash
+# Clone the repository
+git clone https://github.com/your-username/recipe-app.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Navigate to project directory
+cd recipe-app
+
+# Install dependencies
+npm install
+
+# Install JSON Server globally
+npm install -g json-server@0.17.4
+
+# Start JSON Server (Terminal 1)
+json-server --watch db.json --port 3000
+
+# Start React App (Terminal 2)
+npm start
