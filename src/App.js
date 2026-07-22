@@ -16,7 +16,7 @@ function App() {
   return (
     <div className={`App ${mode}`}>
       
-      <BrowserRouter>
+      <BrowserRouter basename="/recipe-app">
         <Navbar />
         <ThemeSelector/>
         <Routes>
