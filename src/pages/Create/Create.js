@@ -3,8 +3,14 @@ import { useState } from "react";
 import './Create.css'
 import { useFetch } from '../../hooks/useFetch';
 import { useNavigate } from 'react-router-dom';
+import { useThem } from '../../hooks/useThem';
 
 export default function Create() {
+
+  const {mode , color} = useThem();
+
+  console.log(color);
+  
 
   const [title, setTitle] = useState('')
   const [method, setMethod] = useState('')
@@ -37,14 +43,15 @@ export default function Create() {
   } , [data , navigate])
 
   return (
-    <div className='create'>
-      <h2 className='page-title'>Create</h2>
+    <div className={`create ${mode}`}>
+      <h2 className={`page-title ${mode}`}>Create Recipes</h2>
 
       <form onSubmit={handleSubmit}> 
 
         <label>
             <span>Recipe Title: </span>
             <input 
+              className={`input ${mode}`}
               type="text"
               onChange={(e) => setTitle(e.target.value)}
               value={title}
@@ -56,11 +63,12 @@ export default function Create() {
             <span>Recipe Ingredients</span>
             <div className="ingredients">
               <input 
+                className={`input ${mode}`}
                 type="text"
                 onChange={(e) => setNewIngredients(e.target.value)}
                 value={newIngredients}
               />
-              <button className="btn" onClick={handleAdd}>Add</button>
+              <button className={`btn`} style={{background:color}} onClick={handleAdd}>Add</button>
             </div>
           </label>
 
@@ -69,6 +77,7 @@ export default function Create() {
           <label>
             <span>Recipe Method: </span>
             <textarea 
+              className={`input ${mode}`} 
               onChange={(e) => setMethod(e.target.value)}
               value={method}
               required
@@ -78,6 +87,7 @@ export default function Create() {
           <label>
             <span>Coocking Time(m): </span>
             <input
+              className={`input ${mode}`}
               type="number"
               onChange={(e) => setCookingTime(e.target.value)}
               value={cookingTime}
@@ -85,7 +95,7 @@ export default function Create() {
             />
           </label>
 
-          <button className="btn">Submit</button>
+          <button className={`btn`} style={{background:color}}>Submit</button>
           
       </form>
     </div>

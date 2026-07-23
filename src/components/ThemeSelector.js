@@ -2,7 +2,7 @@ import { useThem } from "../hooks/useThem";
 import "./ThemeSelector.css";
 import modeIcon from '../assets/mode-icon.svg'
 
-const themeColors = ['#4e208a' , '#249c6b' , '#b70233'];
+const themeColors = ['#6625bb' , '#249c6b' , '#b70233'];
 
 export default function ThemeSelector() {
 

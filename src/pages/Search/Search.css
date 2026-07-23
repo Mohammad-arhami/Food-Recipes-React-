@@ -1,0 +1,7 @@
+.page-title{
+    color: black;
+}
+
+.page-title.dark{
+    color: #fff;
+}

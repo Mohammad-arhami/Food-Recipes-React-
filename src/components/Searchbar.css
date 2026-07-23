@@ -6,3 +6,15 @@
 .searchbar input{
     margin-left: 15px;
 }
+
+.input{
+    color: #fff;
+    outline: none;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+/* .input.dark{
+    color: #fff;
+    background-color: transparent;
+} */
